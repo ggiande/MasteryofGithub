@@ -1,0 +1,36 @@
+"Commands will only work when they are called upon in the designated directory."
+
+HOW TO CLONE A REPOSITORY ONTO MACHINE
+cd ~/Path/to/file
+git clone <url>             //Copied the repository into the path of a directory.
+E.g. [      git clone https://github.com/ggiande/MacPuTTYPort.git      ]
+
+HOW TO ADD FILES INTO AN EXISTING REPOSITORY
+cd ~/Path/of/local/repository
+git add <filename>          //this syncs the filename up to our machine
+    OR
+git add .           //adds all files onto the branch
+
+git commit -m "Brief Description" //still in machine, not synced up
+git push               //pushes up to github.com
+    OPTIONALLY
+git pull                 //pulls everything from the repository that is new | Updating
+
+
+LINK A DIRECTORY TO A REPOSITORY
+//Make an EMPTY repository on Github first
+//On a terminal run the following commands
+
+<Deletes .git if previously initialized in this directory>
+WINDOWS: rd .git /S/Q
+MACOSX: rmdir -r .git /S/Q              // ./S/Q doesn't always work so it may not be needed.
+
+git init
+git add .
+git commit -m "First commit."
+git remote add origin <url>
+
+git push -u origin master   //should work if repository is EMPTY
+    OR
+git push -f origin master       //if repository not empty, this will overwrite EVERYTHING and only push the things under .add
+
