@@ -11,6 +11,8 @@ E.g. [      git clone https://github.com/ggiande/MacPuTTYPort.git      ]
 ### How to add files into an existing repository
 ```
 cd ~/Path/of/local/repository
+<!-- Create an empty git repository in this directory -->
+git init
 
 <!-- Syncs the filename up to our machine -->
 git add <filename>          
