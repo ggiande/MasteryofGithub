@@ -17,27 +17,6 @@ cd ./Path/to/directory/of/choice
 git clone <url>
 ```
 
-### How to add files into an existing repository
-```
-cd ~/Path/of/local/repository
-<!-- Create an empty git repository in this directory -->
-git init
-
-<!-- Syncs the filename up to our machine -->
-git add <filename>          
-
-<!-- Stages all files on the branch for commiting -->
-git add .          
-
-<!-- Adds a commit messages to staged changes  -->
-git commit -m "Brief Description" 
-
-<!-- Pushes our code up to our git remote -->
-git push               
-
-<!-- Pulls everything from the repository's server that is new into our branch -->
-    OPTIONALLY
-git pull                 //pulls everything from the repository that is new | Updating
 ```
 ### How to remove git init from ANY directory
 ```
