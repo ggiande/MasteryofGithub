@@ -1,12 +1,21 @@
 # Mastery of Github
-My all time git reference doc of Github
+My all time git reference document
 
 "Commands will only work when they are called upon in the designated directory."
-
+### .gitignore
+Creates the file to ignore designated files/extensions from being published.
+```
+<!-- Create a .gitignore file in a repo -->
+touch .gitignore
+start .gitignore
+```
 ### How to clone a repository onto a machine
-cd ~/Path/to/file
-git clone <url>             //Copied the repository into the path of a directory.
-E.g. [      git clone https://github.com/ggiande/MacPuTTYPort.git      ]
+```
+cd ./Path/to/directory/of/choice
+
+<!-- Paste the url of the repository to clone the repo into the directory -->
+git clone <url>
+```
 
 ### How to add files into an existing repository
 ```
@@ -28,17 +37,15 @@ git push
     OPTIONALLY
 git pull                 //pulls everything from the repository that is new | Updating
 ```
-
+### How to remove git init from ANY directory
+```
+<!-- These terminal commands delete .git if previously initialized in this directory -->
+WINDOWS: rm -r -f .git/
+MACOSX: rmdir -r .git/
+```
 ### Link a directory to a repository
-1. Make an EMPTY repository on Github first
+1. Make an EMPTY repository on your prefered git hosted site
 2. On a terminal run the following commands
-
-This deletes .git if previously initialized in this directory
-```
-WINDOWS: rd .git /S/Q
-MACOSX: rmdir -r .git /S/Q              // ./S/Q doesn't always work so it may not be needed.
-```
-
 ```
 <!-- Initiates an empty git tracking repository in our local directory -->
 git init
@@ -52,12 +59,9 @@ git commit -m "First commit."
 <!-- Addes a new remote origin, linking to a git repo -->
 git remote add origin <url>
 
-<!--  -->
-git push -u origin main   //should work if repository is EMPTY
-    OR
-git push -f origin master       //if repository not empty, this will overwrite EVERYTHING and only push the things under .add
+<!-- Pushes our commit to the remote -->
+git push -u origin main
 ```
-
 ## Branching
 A branch on git is simply a lightweight movable pointer to one of the repositorie's commits.
 ### Create new branches
@@ -75,5 +79,9 @@ git checkout -b name
 git branch -r 
 
 ```
+Understanding Branching
+
+### git repository of subfolders
+If subfolder is from another repository, we must remove .git/ from the directory. We do so by running ```rm -r -f .git/``` Make note that ```-f``` forces for these changes to occur. 
 
 Author: Giancarlo Garcia Deleon
